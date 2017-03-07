@@ -1,0 +1,210 @@
+$color_gray: #f0f0f0;
+$color_orange: #ff8663;
+
+body{
+  font-family: "Fira Sans";
+  box-sizing: border-box;
+
+}
+.container{
+  width: 980px;
+  margin: 0 auto;
+}
+#filter{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.window{
+  width: 620px;
+  height: 490px;
+  font-size: 12px;
+  color: rgb( 79, 79, 79 );
+  margin: 45px auto 0;
+  font-family: "Fira Sans";
+  border-radius: 8px;
+}
+.window__title{
+  background-color: $color_orange;
+  position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  .window__title-text{
+    color: #fff;
+    font-size: 16px;
+    line-height: 45px;
+    padding-left: 15px;
+  }
+  .window__title-close{
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon_close.png");
+    width: 14px;
+    height: 14px;
+    right: 14px;
+    top: 14px;
+  }
+}
+.window__search{
+  background-color: $color_gray;
+  height: 45px;
+  color: #e4e4e4;
+  .input{
+    color: #000;
+    border-radius: 10px;
+    padding-left: 28px;
+    padding-top: 2px;
+    line-height: 23px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+    border-width: 0;
+    font-family: "Fira Sans";
+    background-color: #fff;
+    background-image: url(../img/icon_zoom.png);
+    background-repeat: no-repeat;
+    background-position: 7px 5px;
+  }
+  .window__search-edit:first-child{
+    padding: 10px 8px 10px 15px;
+  }
+  .window__search-edit{
+    width: 50%;
+    padding: 10px 15px 10px 8px;
+    box-sizing: border-box;
+    float: left;
+  }
+}
+.window__list{
+  height: 355px;
+  background-color: #fff;
+}
+.window__bottom{
+  background-color: $color_gray;
+  height: 45px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  text-align: right;
+  line-height: 45px;
+  .window__bottom-save{
+    margin-right: 7px;
+  }
+}
+.button{
+  background-color: $color_orange;
+  color: #fff;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 0 15px;
+  border: 0;
+  cursor: pointer;
+}
+#list_friends_all{
+  border-right: 1px solid $color_gray;
+  .icon_button{
+    position: absolute;
+    display: block;
+    outline: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon_add.png");
+    top: 50%;
+    margin-top: -8px;
+    right: 8px;
+  }
+}
+#list_friends_filter{
+  .icon_button{
+    position: absolute;
+    display: block;
+    outline: 0;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icon_remove.png");
+    top: 50%;
+    margin-top: -8px;
+    right: 8px;
+  }
+}
+.window__list-block{
+  width: 50%;
+  box-sizing: border-box;
+  overflow: auto;
+  min-height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+  float: left;
+  .window__list-block-items{
+    height: 323px;
+    overflow: auto;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid $color_gray;
+  }
+  li:hover, .hover_clone{
+    background-color: $color_gray;
+  }
+  .window__list-block-item{
+    border-top: 1px solid $color_gray;
+    height: 58px;
+    cursor: pointer;
+    padding-right: 30px;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .window__list-block-item.move_item{
+    position: absolute;
+    //top: 49%;
+    //right: 47%;
+    z-index: 100;
+    background-color: #f0f0f0;
+    box-shadow: 10px 10px 5px #909090;
+  }
+  .window__list-block-title, .window__list-block-name{
+    color: #4f4f4f;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .window__list-block-title{
+    padding-top: 9px;
+    line-height: 20px;
+    height: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $color_gray;
+  }
+  .window__list-block-name{
+    line-height: 60px;
+    margin-left: 60px;
+  }
+  .window__list-block-img{
+    width: 52px;
+    float: left;
+    margin-top: 8px;
+    margin-left: 8px;
+    img{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+  }
+}
+.friends__title{
+  text-align: center;
+  .friends__title-open{
+    display: block;
+    margin: 25px auto;
+  }
+}

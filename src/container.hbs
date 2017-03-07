@@ -1,3 +1,37 @@
-<div id="container">
-    <h1>This is container!!!</h1>
-</div>
+<div class="window">
+    <div class="window__title">
+        <div class="window__title-text">
+            Выберите друзей
+        </div>
+        <a href="" class="window__title-close"></a>
+    </div>
+
+    <div class="window__search">
+        <div class="window__search-edit">
+            <input type="text" class="input" data-search = "all" placeholder="Начните вводить имя друга">
+        </div>
+        <div class="window__search-edit">
+            <input type="text" class="input" data-search = "filter" placeholder="Название">
+        </div>
+    </div>
+
+    <div class="window__list">
+        <div class="window__list-block" id="list_friends_all">
+            <div class="window__list-block-title">Ваши друзья</div>
+            <div class="window__list-block-items">
+                <ul></ul>
+            </div><!--window__list-block-items-->
+        </div><!--window__list-block-->
+        <div class="window__list-block" id="list_friends_filter">
+            <div class="window__list-block-title">Друзья в списке</div>
+            <div class="window__list-block-items">
+                <ul></ul>
+            </div><!--window__list-block-items-->
+        </div>
+
+    </div><!--window__list-->
+
+    <div class="window__bottom">
+        <buttom class="window__bottom-save button">Сохранить</buttom>
+    </div>
+</div><!--window-->
