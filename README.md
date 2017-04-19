@@ -1,5 +1,9 @@
-##VK plugin friend-filter
+#VK plugin friend-filter
 
-###Comands:
+Фильтр для сортировки друзей. Добавление в избранное реализовано как
+через добавление навигационными кнопками, так и через drag&drop
 
-* `npm run start`
+## Команды:
+
+* `npm run start` - запуск через встроенный сервер webpack
+* `npm run build` - сборка проекта для backend
